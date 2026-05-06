@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forget White — Molecular Hair Restoration | UK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white: #FAFAF8;
+    --black: #0A0A0A;
+    --gold: #C9A84C;
+    --gold-light: #E8D5A3;
+    --grey: #6B6B6B;
+    --light-grey: #E8E8E4;
+    --cream: #F5F3EE;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Montserrat', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: var(--sans);
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 60px;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    transition: padding 0.3s ease;
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links {
+    display: flex; gap: 36px; list-style: none;
+  }
+  .nav-links a {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--grey); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--black); }
+  .nav-cta {
+    font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+    background: var(--black); color: var(--white);
+    padding: 12px 28px; border: none; cursor: pointer;
+    font-family: var(--sans); font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--white); }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+    overflow: hidden;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 60px 80px 80px;
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 32px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block; width: 40px; height: 1px; background: var(--gold);
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-size: clamp(52px, 5vw, 80px);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 28px;
+    color: var(--black);
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 13px; line-height: 1.9; color: var(--grey);
+    max-width: 440px; margin-bottom: 52px;
+    font-weight: 300; letter-spacing: 0.02em;
+  }
+  .hero-actions {
+    display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--black); color: var(--white);
+    padding: 18px 44px;
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    font-family: var(--sans); font-weight: 500;
+    border: none; cursor: pointer; text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold); transform: translateY(-1px); }
+  .btn-secondary {
+    font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--black); text-decoration: none; font-weight: 500;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-secondary:hover { color: var(--gold); border-color: var(--gold); }
+
+  .hero-stats {
+    display: flex; gap: 48px; margin-top: 72px;
+    border-top: 1px solid var(--light-grey); padding-top: 36px;
+  }
+  .stat-item { display: flex; flex-direction: column; gap: 6px; }
+  .stat-num {
+    font-family: var(--serif); font-size: 38px; font-weight: 300;
+    line-height: 1; color: var(--black);
+  }
+  .stat-label {
+    font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--grey);
+  }
+
+  .hero-right {
+    background: var(--cream);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-visual {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  /* Decorative product visual */
+  .product-stage {
+    position: relative;
+    width: 320px; height: 480px;
+  }
+  .product-bottle {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px; height: 300px;
+    background: linear-gradient(160deg, #FFFFFF 0%, #E8E8E4 40%, #D0CEC8 100%);
+    border-radius: 60px 60px 20px 20px;
+    box-shadow: 40px 60px 80px rgba(0,0,0,0.15), -10px -10px 30px rgba(255,255,255,0.8);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 12px;
+  }
+  .bottle-label {
+    text-align: center; padding: 0 16px;
+  }
+  .bottle-brand {
+    font-family: var(--serif); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--black);
+    display: block; margin-bottom: 4px;
+  }
+  .bottle-sub-label {
+    font-size: 7px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--grey); display: block; line-height: 1.6;
+  }
+  .bottle-line {
+    width: 40px; height: 1px; background: var(--gold); margin: 8px auto;
+  }
+  .bottle-cap {
+    position: absolute; top: -28px; left: 50%; transform: translateX(-50%);
+    width: 50px; height: 40px;
+    background: linear-gradient(180deg, #2A2A2A 0%, #0A0A0A 100%);
+    border-radius: 6px 6px 0 0;
+  }
+  .product-glow {
+    position: absolute; bottom: -40px; left: 50%; transform: translateX(-50%);
+    width: 200px; height: 60px;
+    background: radial-gradient(ellipse, rgba(201,168,76,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .floating-badge {
+    position: absolute;
+    background: var(--white); padding: 14px 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .badge-top { right: -20px; top: 60px; }
+  .badge-bottom { left: -30px; bottom: 80px; }
+  .badge-value {
+    font-family: var(--serif); font-size: 24px; font-weight: 300; color: var(--gold);
+  }
+  .badge-text {
+    font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey);
+  }
+  .corner-tag {
+    position: absolute; top: 32px; left: 32px;
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--grey); writing-mode: vertical-rl; text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+
+  /* ===== MARQUEE STRIP ===== */
+  .marquee-strip {
+    background: var(--black); color: var(--white);
+    padding: 18px 0; overflow: hidden; white-space: nowrap;
+  }
+  .marquee-inner {
+    display: inline-flex; gap: 60px;
+    animation: marquee 20s linear infinite;
+  }
+  .marquee-item {
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .marquee-dot { color: var(--gold); font-size: 16px; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 120px 80px; }
+
+  .section-label {
+    font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .section-label::after {
+    content: ''; display: block; width: 60px; height: 1px; background: var(--gold);
+  }
+  .section-title {
+    font-family: var(--serif); font-size: clamp(36px, 4vw, 60px);
+    font-weight: 300; line-height: 1.1; color: var(--black);
+  }
+
+  /* ===== PROBLEM/SOLUTION ===== */
+  .problem-section { background: var(--cream); }
+  .problem-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    margin-top: 80px; align-items: start;
+  }
+  .problem-col { padding: 52px; border: 1px solid var(--light-grey); }
+  .problem-col.solution { background: var(--black); border-color: var(--black); }
+  .col-label {
+    font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase;
+    margin-bottom: 24px; display: block;
+  }
+  .problem-col .col-label { color: var(--grey); }
+  .problem-col.solution .col-label { color: var(--gold); }
+  .col-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 300;
+    line-height: 1.2; margin-bottom: 20px; color: var(--black);
+  }
+  .problem-col.solution .col-title { color: var(--white); }
+  .col-text {
+    font-size: 13px; line-height: 1.9; color: var(--grey); font-weight: 300;
+  }
+  .problem-col.solution .col-text { color: rgba(255,255,255,0.6); }
+  .col-divider {
+    width: 40px; height: 1px; background: var(--light-grey); margin: 24px 0;
+  }
+  .problem-col.solution .col-divider { background: var(--gold); }
+
+  /* ===== BENEFITS ===== */
+  .benefits-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+    margin-top: 80px;
+  }
+  .benefit-card {
+    padding: 48px 36px; border: 1px solid var(--light-grey);
+    transition: border-color 0.3s, background 0.3s;
+    position: relative; overflow: hidden;
+  }
+  .benefit-card:hover { border-color: var(--gold); }
+  .benefit-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: var(--gold);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .benefit-card:hover::before { transform: scaleX(1); }
+  .benefit-icon {
+    font-family: var(--serif); font-size: 48px; color: var(--gold);
+    font-weight: 300; line-height: 1; margin-bottom: 24px;
+  }
+  .benefit-title {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--black); margin-bottom: 16px; font-weight: 500;
+  }
+  .benefit-text {
+    font-size: 12px; line-height: 1.8; color: var(--grey); font-weight: 300;
+  }
+
+  /* ===== PRODUCT FOCUS ===== */
+  .product-section {
+    background: var(--black); color: var(--white); padding: 120px 80px;
+  }
+  .product-section .section-title { color: var(--white); }
+  .product-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 100px;
+    margin-top: 80px; align-items: center;
+  }
+  .product-visual-wrap {
+    background: #111; padding: 60px;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 500px; position: relative;
+  }
+  .product-visual-inner {
+    width: 160px; height: 340px;
+    background: linear-gradient(160deg, #3A3A3A 0%, #1A1A1A 60%, #0A0A0A 100%);
+    border-radius: 70px 70px 24px 24px;
+    box-shadow: 30px 50px 80px rgba(0,0,0,0.5), 0 0 60px rgba(201,168,76,0.05);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .product-visual-inner .bottle-cap {
+    background: linear-gradient(180deg, #C9A84C 0%, #8A6F2A 100%);
+  }
+  .product-glow-dark {
+    position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+    width: 160px; height: 40px;
+    background: radial-gradient(ellipse, rgba(201,168,76,0.3) 0%, transparent 70%);
+  }
+  .product-details { color: var(--white); }
+  .product-name {
+    font-family: var(--serif); font-size: 42px; font-weight: 300;
+    line-height: 1.1; margin-bottom: 8px; color: var(--white);
+  }
+  .product-subtitle {
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 32px;
+  }
+  .product-price {
+    font-family: var(--serif); font-size: 56px; font-weight: 300;
+    color: var(--white); margin-bottom: 4px; line-height: 1;
+  }
+  .product-price-note {
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4); margin-bottom: 32px;
+  }
+  .product-desc {
+    font-size: 13px; line-height: 1.9; color: rgba(255,255,255,0.6);
+    margin-bottom: 40px; font-weight: 300;
+  }
+  .product-points {
+    list-style: none; display: flex; flex-direction: column; gap: 12px;
+    margin-bottom: 48px;
+  }
+  .product-points li {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 11px; letter-spacing: 0.1em; color: rgba(255,255,255,0.7);
+  }
+  .product-points li::before {
+    content: '✓'; color: var(--gold); font-size: 13px; font-weight: 600;
+  }
+  .btn-gold {
+    background: var(--gold); color: var(--black);
+    padding: 20px 52px;
+    font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    font-family: var(--sans); font-weight: 600;
+    border: none; cursor: pointer; text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  /* ===== BUNDLES ===== */
+  .bundles-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    margin-top: 80px;
+  }
+  .bundle-card {
+    padding: 48px 36px; border: 1px solid var(--light-grey);
+    position: relative; transition: border-color 0.3s;
+  }
+  .bundle-card:hover { border-color: var(--gold); }
+  .bundle-card.featured {
+    border-color: var(--black); background: var(--cream);
+  }
+  .bundle-tag {
+    position: absolute; top: -1px; right: 32px;
+    background: var(--gold); color: var(--white);
+    font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 6px 14px; font-weight: 500;
+  }
+  .bundle-name {
+    font-family: var(--serif); font-size: 24px; font-weight: 300;
+    margin-bottom: 8px; color: var(--black);
+  }
+  .bundle-items {
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--grey); margin-bottom: 28px;
+  }
+  .bundle-price {
+    font-family: var(--serif); font-size: 44px; font-weight: 300;
+    color: var(--black); line-height: 1;
+  }
+  .bundle-price sup { font-size: 22px; vertical-align: top; margin-top: 8px; display: inline-block; }
+  .bundle-saving {
+    font-size: 10px; letter-spacing: 0.1em; color: var(--gold);
+    margin-bottom: 32px; margin-top: 6px;
+  }
+  .bundle-features {
+    list-style: none; display: flex; flex-direction: column; gap: 10px;
+    margin-bottom: 36px;
+  }
+  .bundle-features li {
+    font-size: 11px; color: var(--grey); display: flex; gap: 10px; align-items: center;
+  }
+  .bundle-features li::before { content: '—'; color: var(--gold); }
+  .btn-bundle {
+    display: block; text-align: center; padding: 16px;
+    font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+    font-weight: 500; text-decoration: none; cursor: pointer;
+    border: 1px solid var(--black); color: var(--black);
+    background: transparent; font-family: var(--sans);
+    transition: background 0.3s, color 0.3s;
+  }
+  .btn-bundle:hover, .bundle-card.featured .btn-bundle {
+    background: var(--black); color: var(--white);
+  }
+
+  /* ===== SOCIAL PROOF ===== */
+  .proof-section { background: var(--cream); }
+  .reviews-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+    margin-top: 80px;
+  }
+  .review-card {
+    background: var(--white); padding: 40px 36px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+  }
+  .review-stars {
+    color: var(--gold); font-size: 14px; margin-bottom: 20px;
+    letter-spacing: 4px;
+  }
+  .review-text {
+    font-family: var(--serif); font-size: 16px; font-style: italic;
+    line-height: 1.7; color: var(--black); margin-bottom: 24px;
+    font-weight: 300;
+  }
+  .review-author {
+    display: flex; align-items: center; gap: 14px;
+  }
+  .author-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--light-grey); display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-size: 16px; color: var(--grey);
+  }
+  .author-name {
+    font-size: 11px; letter-spacing: 0.1em; color: var(--black); font-weight: 500;
+  }
+  .author-location {
+    font-size: 10px; color: var(--grey); margin-top: 2px;
+  }
+  .trust-bar {
+    display: flex; justify-content: center; gap: 60px; align-items: center;
+    margin-top: 80px; padding-top: 60px; border-top: 1px solid var(--light-grey);
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey);
+  }
+  .trust-icon { font-size: 28px; }
+
+  /* ===== SCIENCE SECTION ===== */
+  .science-section { background: var(--black); color: var(--white); padding: 120px 80px; }
+  .science-section .section-title { color: var(--white); }
+  .science-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 100px;
+    margin-top: 80px; align-items: center;
+  }
+  .science-text p {
+    font-size: 13px; line-height: 2; color: rgba(255,255,255,0.6);
+    margin-bottom: 24px; font-weight: 300;
+  }
+  .science-diagram {
+    padding: 60px;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .diagram-row {
+    display: flex; align-items: center; gap: 20px;
+    padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .diagram-row:last-child { border-bottom: none; }
+  .diagram-label {
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4); width: 120px; flex-shrink: 0;
+  }
+  .diagram-bar-wrap { flex: 1; }
+  .diagram-bar {
+    height: 6px; background: rgba(255,255,255,0.06); position: relative; overflow: hidden;
+  }
+  .diagram-fill {
+    height: 100%; background: var(--gold);
+    transition: width 1s ease;
+  }
+  .diagram-pct {
+    font-family: var(--serif); font-size: 20px; color: var(--gold);
+    width: 60px; text-align: right; flex-shrink: 0;
+  }
+
+  /* ===== CHECKOUT SECTION ===== */
+  .checkout-section { padding: 120px 80px; }
+  .checkout-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    margin-top: 80px; align-items: start;
+  }
+  .checkout-info h3 {
+    font-family: var(--serif); font-size: 36px; font-weight: 300;
+    color: var(--black); margin-bottom: 24px; line-height: 1.2;
+  }
+  .checkout-info p {
+    font-size: 13px; line-height: 1.9; color: var(--grey); margin-bottom: 36px;
+  }
+  .shipping-options { display: flex; flex-direction: column; gap: 16px; }
+  .ship-option {
+    display: flex; align-items: center; gap: 16px; padding: 20px;
+    border: 1px solid var(--light-grey);
+  }
+  .ship-icon { font-size: 24px; }
+  .ship-label {
+    font-size: 11px; letter-spacing: 0.1em; color: var(--black); font-weight: 500;
+  }
+  .ship-note { font-size: 10px; color: var(--grey); margin-top: 2px; }
+  .ship-price {
+    margin-left: auto; font-family: var(--serif); font-size: 18px; color: var(--gold);
+  }
+  /* Form */
+  .checkout-form {
+    background: var(--cream); padding: 52px;
+  }
+  .form-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 300;
+    color: var(--black); margin-bottom: 36px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+  .form-label {
+    font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--grey); font-weight: 500;
+  }
+  .form-input {
+    padding: 16px 18px; background: var(--white); border: 1px solid var(--light-grey);
+    font-size: 13px; font-family: var(--sans); color: var(--black);
+    outline: none; transition: border-color 0.2s;
+    appearance: none;
+  }
+  .form-input:focus { border-color: var(--gold); }
+  .form-input::placeholder { color: #BDBDB8; }
+  .form-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; cursor: pointer; }
+  .product-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 0; border-bottom: 1px solid var(--light-grey);
+    margin-bottom: 16px;
+  }
+  .product-row-name { font-size: 12px; color: var(--black); }
+  .product-row-price { font-family: var(--serif); font-size: 18px; color: var(--black); }
+  .form-total {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 0;
+    border-top: 2px solid var(--black);
+    margin-top: 8px;
+  }
+  .total-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; }
+  .total-price { font-family: var(--serif); font-size: 32px; color: var(--gold); }
+  .guarantee-row {
+    display: flex; align-items: center; gap: 10px; margin: 20px 0;
+    font-size: 10px; color: var(--grey); letter-spacing: 0.05em;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--black); color: var(--white);
+    padding: 80px 80px 40px;
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px;
+    margin-bottom: 60px; padding-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand {
+    font-family: var(--serif); font-size: 26px; font-weight: 300;
+    letter-spacing: 0.1em; color: var(--white); margin-bottom: 20px;
+  }
+  .footer-brand span { color: var(--gold); }
+  .footer-desc {
+    font-size: 12px; line-height: 1.8; color: rgba(255,255,255,0.4);
+    max-width: 280px;
+  }
+  .footer-col-title {
+    font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 24px;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a {
+    font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--white); }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+  }
+  .footer-copy { font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.1em; }
+  .footer-note {
+    font-size: 10px; color: rgba(255,255,255,0.2); max-width: 400px; line-height: 1.6;
+    text-align: right;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  .fade-in {
+    opacity: 0; transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 900px) {
+    nav { padding: 20px 24px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 120px 24px 60px; }
+    .hero-right { min-height: 400px; }
+    .hero-stats { gap: 28px; }
+    section { padding: 80px 24px; }
+    .problem-grid, .product-layout, .science-layout, .checkout-layout { grid-template-columns: 1fr; gap: 40px; }
+    .benefits-grid { grid-template-columns: 1fr 1fr; }
+    .bundles-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    footer { padding: 60px 24px 40px; }
+    .trust-bar { gap: 32px; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-note { text-align: left; }
+    .product-section, .science-section { padding: 80px 24px; }
+    .checkout-section { padding: 80px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Forget <span>White</span></a>
+  <ul class="nav-links">
+    <li><a href="#science">The Science</a></li>
+    <li><a href="#products">Shop</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#order">Order Now</a></li>
+  </ul>
+  <a href="#order" class="nav-cta">Claim Partner Rate</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">UK Partner Access — Limited Batch</div>
+    <h1 class="hero-title">
+      Beyond<br>Surface<br><em>Repair.</em>
+    </h1>
+    <p class="hero-sub">Engineered in our European research laboratories, Forget White delivers a 70% concentrated Phyto-Keratin complex that bio-mimics your hair's natural protein structure — rebuilding from the inside out.</p>
+    <div class="hero-actions">
+      <a href="#order" class="btn-primary">Claim Your Partner Rate</a>
+      <a href="#science" class="btn-secondary">Discover the Science</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">70%</span>
+        <span class="stat-label">Active Protein Concentration</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Washes to Visible Results</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Vegan & Cruelty-Free</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-visual">
+      <span class="corner-tag">EU Research Laboratory</span>
+      <div class="product-stage">
+        <div class="product-bottle">
+          <div class="bottle-cap"></div>
+          <div class="bottle-label">
+            <span class="bottle-brand">Forget White</span>
+            <div class="bottle-line"></div>
+            <span class="bottle-sub-label">Intense Recovery<br>Phyto-Keratin Serum</span>
+          </div>
+        </div>
+        <div class="product-glow"></div>
+        <div class="floating-badge badge-top">
+          <span class="badge-value">£45</span>
+          <span class="badge-text">Partner Rate</span>
+        </div>
+        <div class="floating-badge badge-bottom">
+          <span class="badge-value">⭐⭐⭐⭐⭐</span>
+          <span class="badge-text">10,000+ EU Customers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span class="marquee-item"><span class="marquee-dot">◆</span> Free UK Tracked Delivery Over £50</span>
+    <span class="marquee-item"><span class="marquee-dot">◆</span> 60-Day Money-Back Guarantee</span>
+    <span class="marquee-item"><span class="marquee-dot">◆</span> Formulated in EU Research Laboratories</span>
+    <span class="marquee-item"><span class="marquee-dot">◆</span> 100% Vegan & Cruelty-Free</span>
+    <span class="marquee-item"><span class="marquee-dot">◆</span> Clinical Grade Phyto-Keratin</span>
+    <span class="marquee-item"><span class="marquee-dot">◆</span> UK Partner Rate — Limited Allocation</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item"><span class="marquee-dot">◆</span> Free UK Tracked Delivery Over £50</span>
+    <span class="marquee-item"><span class="marquee-dot">◆</span> 60-Day Money-Back Guarantee</span>
+    <span class="marquee-item"><span class="marquee-dot">◆</span> Formulated in EU Research Laboratories</span>
+    <span class="marquee-item"><span class="marquee-dot">◆</span> 100% Vegan & Cruelty-Free</span>
+    <span class="marquee-item"><span class="marquee-dot">◆</span> Clinical Grade Phyto-Keratin</span>
+    <span class="marquee-item"><span class="marquee-dot">◆</span> UK Partner Rate — Limited Allocation</span>
+  </div>
+</div>
+
+<!-- PROBLEM/SOLUTION -->
+<section class="problem-section fade-in" id="science">
+  <div class="section-label">The Problem</div>
+  <h2 class="section-title">Most products mask<br>the damage. We rebuild it.</h2>
+  <div class="problem-grid">
+    <div class="problem-col">
+      <span class="col-label">The Industry Standard</span>
+      <h3 class="col-title">Silicones. Oils. Temporary Gloss.</h3>
+      <div class="col-divider"></div>
+      <p class="col-text">Traditional hair care products create an illusion of health using heavy silicones and synthetic coatings. The hair fibre appears smooth, but the structural damage underneath continues to worsen with every wash. It's a cycle of dependency with no real solution — just an ever-growing product shelf.</p>
+    </div>
+    <div class="problem-col solution">
+      <span class="col-label">The Forget White Method</span>
+      <h3 class="col-title" style="color:var(--white)">Molecular Repair from Within.</h3>
+      <div class="col-divider"></div>
+      <p class="col-text" style="color:rgba(255,255,255,0.6)">Our Phyto-Keratin complex is bio-identical to the proteins naturally found in healthy hair. It doesn't coat the cuticle — it penetrates it, filling the structural gaps caused by heat, chemicals and environmental stress. The result is genuine, lasting strength — not a temporary illusion.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="fade-in">
+  <div class="section-label">Key Benefits</div>
+  <h2 class="section-title">Four pillars of<br>superior hair science.</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">⬡</div>
+      <div class="benefit-title">Bio-Mimetic Technology</div>
+      <p class="benefit-text">Our formula achieves identity-match with human hair proteins, ensuring complete integration into the cuticle structure rather than surface adhesion.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">◎</div>
+      <div class="benefit-title">Zero Compromise Formula</div>
+      <p class="benefit-text">100% Vegan. Cruelty-Free. Paraben-Free. Silicone-Free. No concessions on purity — the same standard held in our EU pharmaceutical laboratories.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">⊕</div>
+      <div class="benefit-title">UK Fast-Track Delivery</div>
+      <p class="benefit-text">Dispatched from our Central European Production Hub with full UK tracking. Premium 3–5 business day delivery to your door. Next-day available at checkout.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">◈</div>
+      <div class="benefit-title">Clinical Results</div>
+      <p class="benefit-text">Visible improvement in elasticity, density and mirror-like shine within 3 washes. Independently verified on all hair types — from fine to coarse, colour-treated to natural.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT -->
+<section class="product-section fade-in" id="products">
+  <div class="section-label">The Collection</div>
+  <h2 class="section-title" style="color:var(--white)">Intense Recovery Serum.<br>Our Signature Formula.</h2>
+  <div class="product-layout">
+    <div class="product-visual-wrap">
+      <div class="product-visual-inner">
+        <div class="bottle-cap" style="background:linear-gradient(180deg,#C9A84C 0%,#8A6F2A 100%);"></div>
+        <div class="bottle-label">
+          <span class="bottle-brand" style="color:rgba(255,255,255,0.9)">Forget White</span>
+          <div class="bottle-line"></div>
+          <span class="bottle-sub-label" style="color:rgba(255,255,255,0.4)">Intense Recovery<br>Phyto-Keratin Serum</span>
+        </div>
+      </div>
+      <div class="product-glow-dark"></div>
+    </div>
+    <div class="product-details">
+      <div class="product-subtitle">Forget White — Signature Formula</div>
+      <h3 class="product-name">Intense Recovery<br>Phyto-Keratin Serum</h3>
+      <div class="product-price">£45<sup style="font-size:28px;color:var(--gold)">.00</sup></div>
+      <div class="product-price-note">UK Partner Rate · Free delivery over £50</div>
+      <p class="product-desc">A liquid infusion for hair that has forgotten its strength. Non-greasy, rapid absorption formula delivers 70% concentrated structural proteins directly to the cortex. Suitable for all hair types — unisex, professional grade.</p>
+      <ul class="product-points">
+        <li>70ml / 2.4 fl oz — 4–6 week supply</li>
+        <li>Suitable for all hair types and textures</li>
+        <li>No residue · Non-greasy · Rapid absorption</li>
+        <li>Colour-safe and keratin-treatment compatible</li>
+      </ul>
+      <a href="#order" class="btn-gold">Add to Bag — £45.00</a>
+    </div>
+  </div>
+</section>
+
+<!-- BUNDLES -->
+<section class="fade-in">
+  <div class="section-label">Partner Bundles</div>
+  <h2 class="section-title">Maximum value.<br>Maximum results.</h2>
+  <div class="bundles-grid">
+    <div class="bundle-card">
+      <div class="bundle-name">The Starter</div>
+      <div class="bundle-items">1 × Intense Recovery Serum</div>
+      <div class="bundle-price"><sup>£</sup>45</div>
+      <div class="bundle-saving">+ Standard UK Delivery</div>
+      <ul class="bundle-features">
+        <li>Full-size 70ml serum</li>
+        <li>3–5 day tracked delivery</li>
+        <li>60-day guarantee</li>
+      </ul>
+      <a href="#order" class="btn-bundle">Select Starter</a>
+    </div>
+    <div class="bundle-card featured">
+      <div class="bundle-tag">Best Value</div>
+      <div class="bundle-name">Full Restoration</div>
+      <div class="bundle-items">3 × Intense Recovery Serum</div>
+      <div class="bundle-price"><sup>£</sup>99</div>
+      <div class="bundle-saving">Save £36 · Free Next-Day Delivery</div>
+      <ul class="bundle-features">
+        <li>3 × full-size 70ml serums</li>
+        <li>Free next-day UK delivery</li>
+        <li>Priority dispatch</li>
+        <li>60-day guarantee</li>
+      </ul>
+      <a href="#order" class="btn-bundle">Select Full Restoration</a>
+    </div>
+    <div class="bundle-card">
+      <div class="bundle-name">The Duo</div>
+      <div class="bundle-items">2 × Intense Recovery Serum</div>
+      <div class="bundle-price"><sup>£</sup>79</div>
+      <div class="bundle-saving">Save £11 · Free Standard Delivery</div>
+      <ul class="bundle-features">
+        <li>2 × full-size 70ml serums</li>
+        <li>Free standard UK delivery</li>
+        <li>60-day guarantee</li>
+      </ul>
+      <a href="#order" class="btn-bundle">Select Duo</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="proof-section fade-in" id="reviews">
+  <div class="section-label">Client Testimonials</div>
+  <h2 class="section-title">What the UK says.</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Finally, a product that doesn't just sit on top of my hair. My stylist noticed the difference before I even mentioned it. The texture is extraordinary — it feels like a medical-grade treatment, not a cosmetic."</p>
+      <div class="review-author">
+        <div class="author-avatar">S</div>
+        <div>
+          <div class="author-name">Sarah J.</div>
+          <div class="author-location">London, UK · Verified Purchase</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"As someone who thought hair care was purely a female domain, this changed my perspective entirely. My barber actually asked what I'd been using. The density and manageability after three uses was genuinely remarkable."</p>
+      <div class="review-author">
+        <div class="author-avatar">M</div>
+        <div>
+          <div class="author-name">Marcus T.</div>
+          <div class="author-location">Manchester, UK · Verified Purchase</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"I'd spent hundreds on salon treatments. This arrived in four days from their EU lab and delivered better results in a week than anything I'd tried in years. The 'Forget White' aesthetic on my bathroom shelf is also stunning."</p>
+      <div class="review-author">
+        <div class="author-avatar">E</div>
+        <div>
+          <div class="author-name">Eleanor P.</div>
+          <div class="author-location">Edinburgh, UK · Verified Purchase</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="trust-bar">
+    <div class="trust-item"><span class="trust-icon">🌿</span>100% Vegan</div>
+    <div class="trust-item"><span class="trust-icon">🔬</span>Lab Certified</div>
+    <div class="trust-item"><span class="trust-icon">🇪🇺</span>Made in EU</div>
+    <div class="trust-item"><span class="trust-icon">✓</span>Cruelty-Free</div>
+    <div class="trust-item"><span class="trust-icon">↩</span>60-Day Guarantee</div>
+    <div class="trust-item"><span class="trust-icon">🔒</span>Secure Checkout</div>
+  </div>
+</section>
+
+<!-- SCIENCE DIAGRAM -->
+<section class="science-section fade-in">
+  <div class="section-label">The Formulation</div>
+  <h2 class="section-title" style="color:var(--white)">Why 70% changes<br>everything.</h2>
+  <div class="science-layout">
+    <div class="science-text">
+      <p>The hair fibre is composed primarily of keratin — a structural protein that gives each strand its strength, elasticity and shine. When exposed to heat, chemical processes or environmental stress, this protein structure degrades at the cortex level.</p>
+      <p>Most commercial products contain less than 5% active protein, suspended in water and silicone. Forget White uses a 70% concentrated Phyto-Keratin complex — bio-identical proteins derived from plant sources that are structurally identical to human hair keratin.</p>
+      <p>The result is genuine cortex repair: not a coating, not a film, but actual structural integration that restores the hair fibre from within.</p>
+      <a href="#order" class="btn-gold" style="margin-top:16px; display:inline-block">Experience the Difference →</a>
+    </div>
+    <div class="science-diagram">
+      <div class="diagram-row">
+        <span class="diagram-label">Forget White</span>
+        <div class="diagram-bar-wrap">
+          <div class="diagram-bar"><div class="diagram-fill" style="width:70%"></div></div>
+        </div>
+        <span class="diagram-pct">70%</span>
+      </div>
+      <div class="diagram-row">
+        <span class="diagram-label">Salon Treatment</span>
+        <div class="diagram-bar-wrap">
+          <div class="diagram-bar"><div class="diagram-fill" style="width:22%;background:rgba(255,255,255,0.3)"></div></div>
+        </div>
+        <span class="diagram-pct" style="color:rgba(255,255,255,0.4)">22%</span>
+      </div>
+      <div class="diagram-row">
+        <span class="diagram-label">Premium Brand A</span>
+        <div class="diagram-bar-wrap">
+          <div class="diagram-bar"><div class="diagram-fill" style="width:12%;background:rgba(255,255,255,0.15)"></div></div>
+        </div>
+        <span class="diagram-pct" style="color:rgba(255,255,255,0.3)">12%</span>
+      </div>
+      <div class="diagram-row">
+        <span class="diagram-label">Market Average</span>
+        <div class="diagram-bar-wrap">
+          <div class="diagram-bar"><div class="diagram-fill" style="width:5%;background:rgba(255,255,255,0.08)"></div></div>
+        </div>
+        <span class="diagram-pct" style="color:rgba(255,255,255,0.2)">&lt;5%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER / CHECKOUT -->
+<section class="checkout-section fade-in" id="order">
+  <div class="section-label">Secure Order</div>
+  <h2 class="section-title">Claim your UK<br>Partner Rate today.</h2>
+  <div class="checkout-layout">
+    <div class="checkout-info">
+      <h3>Direct from our EU laboratory to your UK doorstep.</h3>
+      <p>By ordering through our Partner Portal, you bypass traditional retail and distribution markups — receiving the same clinical-grade formula at the source price. All UK orders are dispatched from our Central European Production Hub with full tracking.</p>
+      <div class="shipping-options">
+        <div class="ship-option">
+          <span class="ship-icon">📦</span>
+          <div>
+            <div class="ship-label">Standard UK Tracked</div>
+            <div class="ship-note">3–5 business days · Royal Mail / DPD</div>
+          </div>
+          <span class="ship-price">Free over £50</span>
+        </div>
+        <div class="ship-option">
+          <span class="ship-icon">⚡</span>
+          <div>
+            <div class="ship-label">Express Next-Day Delivery</div>
+            <div class="ship-note">Order before 2pm · DPD Next Day</div>
+          </div>
+          <span class="ship-price">£6.99</span>
+        </div>
+      </div>
+    </div>
+    <div class="checkout-form">
+      <div class="form-title">Complete Your Order</div>
+      <div class="product-row">
+        <span class="product-row-name">Forget White — Intense Recovery Serum (70ml)</span>
+        <span class="product-row-price">£45.00</span>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">First Name</label>
+          <input class="form-input" type="text" placeholder="Jane">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Last Name</label>
+          <input class="form-input" type="text" placeholder="Smith">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input class="form-input" type="email" placeholder="jane@email.co.uk">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <input class="form-input" type="tel" placeholder="+44 7700 000000">
+      </div>
+      <div class="form-group">
+        <label class="form-label">UK Postcode</label>
+        <input class="form-input" type="text" placeholder="SW1A 1AA" id="postcode" oninput="lookupPostcode(this.value)">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Street Address</label>
+        <input class="form-input" type="text" placeholder="10 Downing Street" id="address">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">City</label>
+          <input class="form-input" type="text" placeholder="London" id="city">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Delivery Option</label>
+          <select class="form-input form-select">
+            <option>Standard (Free)</option>
+            <option>Express Next-Day (£6.99)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-total">
+        <span class="total-label">Total (incl. VAT)</span>
+        <span class="total-price">£45.00</span>
+      </div>
+      <div class="guarantee-row">
+        🔒 Secure checkout · 60-day money-back guarantee
+      </div>
+      <button class="btn-primary" style="width:100%;padding:20px;font-size:11px;letter-spacing:0.3em;" onclick="handleOrder()">
+        Complete My Restoration Order
+      </button>
+      <div style="margin-top:20px;text-align:center;font-size:10px;color:var(--grey);letter-spacing:0.1em;line-height:1.8;">
+        We accept Visa · Mastercard · Apple Pay · PayPal<br>
+        Ethically sourced, formulated in our EU Research Centre. Distributed exclusively by Forget White UK.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">Forget <span>White</span></div>
+      <p class="footer-desc">Professional bio-restoration for every hair type. Formulated in our European research laboratories. Direct-to-consumer pricing. No retail markups.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Shop</div>
+      <ul class="footer-links">
+        <li><a href="#products">Intense Recovery Serum</a></li>
+        <li><a href="#order">Bundle Sets</a></li>
+        <li><a href="#order">The Full Restoration Kit</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Information</div>
+      <ul class="footer-links">
+        <li><a href="#science">The Science</a></li>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="#">hello@forgetwhite.co.uk</a></li>
+        <li><a href="#">@forgetwhite_uk</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Forget White UK. All rights reserved. Company No. [XXXXXXXX]</div>
+    <div class="footer-note">To maintain our Direct-from-Lab pricing, all UK orders are dispatched from our Central European Production Hub. Ethically sourced and formulated in our specialised laboratories in Romania. Distributed exclusively by Forget White UK.</div>
+  </div>
+</footer>
+
+<script>
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Sticky nav
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 60) {
+      nav.style.padding = '16px 60px';
+    } else {
+      nav.style.padding = '24px 60px';
+    }
+  });
+
+  // Postcode lookup simulation
+  function lookupPostcode(val) {
+    val = val.replace(/\s/g, '').toUpperCase();
+    if (val.length >= 5) {
+      const cityMap = {
+        'SW': 'London', 'SE': 'London', 'EC': 'London', 'WC': 'London',
+        'E': 'London', 'N': 'London', 'NW': 'London', 'W': 'London',
+        'M': 'Manchester', 'B': 'Birmingham', 'EH': 'Edinburgh',
+        'G': 'Glasgow', 'LS': 'Leeds', 'L': 'Liverpool', 'BS': 'Bristol'
+      };
+      const prefix = val.match(/^([A-Z]{1,2})/)?.[1] || '';
+      const city = cityMap[prefix] || 'London';
+      document.getElementById('city').value = city;
+    }
+  }
+
+  // Order handler
+  function handleOrder() {
+    const btn = document.querySelector('.checkout-section .btn-primary');
+    btn.textContent = 'Processing your order...';
+    btn.style.background = '#333';
+    setTimeout(() => {
+      btn.textContent = '✓ Order Confirmed — Confirmation email sent!';
+      btn.style.background = '#2D6A2D';
+    }, 1800);
+  }
+</script>
+</body>
+</html>
